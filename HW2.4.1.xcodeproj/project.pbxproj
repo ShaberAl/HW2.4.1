@@ -56,11 +56,11 @@
 		2291517527FC71EA00F537DA /* HW2.4.1 */ = {
 			isa = PBXGroup;
 			children = (
-				2291518A27FC71F800F537DA /* SupportFiles */,
 				2291518C27FC723500F537DA /* Models */,
 				2291518B27FC721A00F537DA /* Views */,
 				2291518E27FC725100F537DA /* Controllers */,
 				2291518D27FC724000F537DA /* Resources */,
+				2291518A27FC71F800F537DA /* SupportFiles */,
 			);
 			path = HW2.4.1;
 			sourceTree = "<group>";
