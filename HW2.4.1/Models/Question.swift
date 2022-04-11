@@ -59,7 +59,7 @@ enum AnimalType: Character {
         case .rabbit:
             return "Чуешь опасность и готов держаться от неё подальше."
         case .turtle:
-            return "Сама водняная неотвратимость."
+            return "Сама водяная неотвратимость."
         }
     }
 }

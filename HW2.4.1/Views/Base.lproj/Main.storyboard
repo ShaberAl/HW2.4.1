@@ -337,6 +337,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="overralResultLabel" destination="wEA-yK-JVd" id="uFe-zW-hR9"/>
+                        <outlet property="textResultLabel" destination="mf1-rB-dtf" id="uqT-NG-uts"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNK-py-gQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="g1k-Em-7Dn" userLabel="Exit" sceneMemberID="exit"/>
