@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW2_4_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="HW2_4_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
         <!--Вопрос №-->
         <scene sceneID="7ql-wQ-WUP">
             <objects>
-                <viewController id="b6N-BJ-a27" sceneMemberID="viewController">
+                <viewController id="b6N-BJ-a27" customClass="QuestionViewController" customModule="HW2_4_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OcS-tJ-IAf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,25 +107,37 @@
                                         <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="firstButtonPressed:" destination="b6N-BJ-a27" eventType="touchUpInside" id="gdq-6p-U1f"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6q-xi-2r3">
                                         <rect key="frame" x="0.0" y="47" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="firstButtonPressed:" destination="b6N-BJ-a27" eventType="touchUpInside" id="VFx-Qf-Eab"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ew-xk-iQw">
                                         <rect key="frame" x="0.0" y="94" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="firstButtonPressed:" destination="b6N-BJ-a27" eventType="touchUpInside" id="dno-1U-cyV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mD-Fj-mnk">
                                         <rect key="frame" x="0.0" y="141" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="firstButtonPressed:" destination="b6N-BJ-a27" eventType="touchUpInside" id="HSa-W8-v7V"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NdQ-gr-tmm">
+                            <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NdQ-gr-tmm">
                                 <rect key="frame" x="65" y="174.5" width="190.5" height="219"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Nqh-el-det">
@@ -185,20 +197,23 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzE-Vm-mrj">
-                                        <rect key="frame" x="52" y="188" width="86" height="31"/>
+                                        <rect key="frame" x="0.0" y="188" width="190.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="secondButtonPressed" destination="b6N-BJ-a27" eventType="touchUpInside" id="NUk-Fe-onq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-vL-pvL">
+                            <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-vL-pvL">
                                 <rect key="frame" x="20" y="233.5" width="280" height="101.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="faS-fc-prA">
                                         <rect key="frame" x="-2" y="0.0" width="284" height="31"/>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="icz-VL-EsW">
-                                        <rect key="frame" x="8.5" y="40" width="263" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="icz-VL-EsW">
+                                        <rect key="frame" x="0.0" y="40" width="280" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-d4-lD7">
                                                 <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -207,7 +222,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMh-AC-8Pn">
-                                                <rect key="frame" x="221.5" y="0.0" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="238.5" y="0.0" width="41.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -215,9 +230,12 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zR-y6-sHZ">
-                                        <rect key="frame" x="97" y="70.5" width="86" height="31"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="280" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="thirdButtonPressed" destination="b6N-BJ-a27" eventType="touchUpInside" id="MdQ-1q-0LW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -251,6 +269,26 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="XNL-VQ-Doz"/>
                     <connections>
+                        <outlet property="firstSV" destination="n7N-rj-78K" id="JEN-Gi-vn5"/>
+                        <outlet property="progressView" destination="umx-Oa-UEY" id="6Cn-8J-nnV"/>
+                        <outlet property="questionLabel" destination="vmP-Pd-p8K" id="BqQ-yh-sVN"/>
+                        <outlet property="secondSV" destination="NdQ-gr-tmm" id="05K-sL-Gkn"/>
+                        <outlet property="thirdSV" destination="nv3-vL-pvL" id="JJd-6Q-edB"/>
+                        <outlet property="thirdSlider" destination="faS-fc-prA" id="jQB-1P-WB1"/>
+                        <outletCollection property="firstButtons" destination="LjC-lg-VdU" collectionClass="NSMutableArray" id="sng-Ij-lYA"/>
+                        <outletCollection property="firstButtons" destination="K6q-xi-2r3" collectionClass="NSMutableArray" id="Mue-vX-2KL"/>
+                        <outletCollection property="firstButtons" destination="4ew-xk-iQw" collectionClass="NSMutableArray" id="8A9-WO-Ojh"/>
+                        <outletCollection property="firstButtons" destination="7mD-Fj-mnk" collectionClass="NSMutableArray" id="U6j-LW-OuU"/>
+                        <outletCollection property="secondLabels" destination="Ean-be-vTz" collectionClass="NSMutableArray" id="ZBS-Fb-gwq"/>
+                        <outletCollection property="secondLabels" destination="TiT-XJ-4fl" collectionClass="NSMutableArray" id="wa4-oY-4vD"/>
+                        <outletCollection property="secondLabels" destination="uNQ-oh-ltk" collectionClass="NSMutableArray" id="ssd-t4-gFJ"/>
+                        <outletCollection property="secondLabels" destination="bTH-TE-6dj" collectionClass="NSMutableArray" id="lJ5-rP-4XT"/>
+                        <outletCollection property="secondSwitches" destination="huH-dk-0tO" collectionClass="NSMutableArray" id="PVT-Ia-eJe"/>
+                        <outletCollection property="secondSwitches" destination="mr9-JS-H0a" collectionClass="NSMutableArray" id="jan-nw-SEt"/>
+                        <outletCollection property="secondSwitches" destination="B1f-7Q-Lof" collectionClass="NSMutableArray" id="Smu-Ts-lce"/>
+                        <outletCollection property="secondSwitches" destination="nKA-wo-ziT" collectionClass="NSMutableArray" id="Opq-sA-pR5"/>
+                        <outletCollection property="thirdLabels" destination="8Mh-d4-lD7" collectionClass="NSMutableArray" id="Ahg-l6-hUb"/>
+                        <outletCollection property="thirdLabels" destination="MMh-AC-8Pn" collectionClass="NSMutableArray" id="yn4-gc-HVm"/>
                         <segue destination="TYY-xL-g2X" kind="show" identifier="showResult" id="xee-1t-j7B"/>
                     </connections>
                 </viewController>
@@ -261,7 +299,7 @@
         <!--Результаты-->
         <scene sceneID="gVq-1H-uCa">
             <objects>
-                <viewController id="TYY-xL-g2X" sceneMemberID="viewController">
+                <viewController id="TYY-xL-g2X" customClass="ResultViewController" customModule="HW2_4_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nC2-Cq-SWx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,10 +331,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="SZh-g4-KzL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="UJr-ZG-9fm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="UJr-ZG-9fm">
+                            <connections>
+                                <segue destination="g1k-Em-7Dn" kind="unwind" unwindAction="unwindFor:" id="7Yw-Di-OCY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNK-py-gQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="g1k-Em-7Dn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2218" y="80"/>
         </scene>
